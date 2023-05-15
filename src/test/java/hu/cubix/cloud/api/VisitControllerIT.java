@@ -1,4 +1,4 @@
-package hu.webuni.cloud.api;
+package hu.cubix.cloud.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

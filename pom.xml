@@ -5,10 +5,10 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.0</version>
+		<version>3.0.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>hu.webuni.cloud</groupId>
+	<groupId>hu.cubix.cloud</groupId>
 	<artifactId>spring-cloud-native-db-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-cloud-native-db-demo</name>
@@ -51,7 +51,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>3.0.0-M7</version>
+				<version>3.0.0</version>
 				<executions>
 					<execution>
 						<goals>

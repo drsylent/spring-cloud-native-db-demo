@@ -1,6 +1,6 @@
-package hu.webuni.cloud.api;
+package hu.cubix.cloud.api;
 
-import hu.webuni.cloud.service.VisitService;
+import hu.cubix.cloud.service.VisitService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

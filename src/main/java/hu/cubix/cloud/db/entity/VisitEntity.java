@@ -1,4 +1,4 @@
-package hu.webuni.cloud.db.entity;
+package hu.cubix.cloud.db.entity;
 
 import jakarta.persistence.*;
 

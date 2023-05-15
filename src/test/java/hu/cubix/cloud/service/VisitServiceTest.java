@@ -1,7 +1,7 @@
-package hu.webuni.cloud.service;
+package hu.cubix.cloud.service;
 
-import hu.webuni.cloud.db.entity.VisitEntity;
-import hu.webuni.cloud.db.repository.VisitRepository;
+import hu.cubix.cloud.db.entity.VisitEntity;
+import hu.cubix.cloud.db.repository.VisitRepository;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Test;
