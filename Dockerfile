@@ -3,8 +3,10 @@ FROM eclipse-temurin:21 AS builder
 RUN mkdir /opt/build
 WORKDIR /opt/build
 COPY .mvn .mvn
+COPY mvnw .
+COPY pom.xml .
 COPY src src
-COPY ./* .
+RUN chmod +x ./mvnw && ls -lah
 RUN ./mvnw clean verify
 
 FROM eclipse-temurin:21-jre
