@@ -4,6 +4,7 @@ import hu.cubix.cloud.db.entity.VisitEntity;
 import hu.cubix.cloud.db.repository.VisitRepository;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
@@ -11,8 +12,14 @@ import java.util.Collections;
 
 class VisitServiceTest {
 
-    private static final VisitRepository repository = Mockito.mock(VisitRepository.class);
-    private static final VisitService service = new VisitService(repository);
+    private VisitRepository repository;
+    private VisitService service;
+
+    @BeforeEach
+    void setUp() {
+        repository = Mockito.mock(VisitRepository.class);
+        service = new VisitService(repository);
+    }
 
     @Test
     void visited_empty() {
@@ -21,7 +28,7 @@ class VisitServiceTest {
         long result = service.visited();
 
         MatcherAssert.assertThat(result, CoreMatchers.is(1L));
-        Mockito.verify(repository, Mockito.atLeastOnce()).save(Mockito.any());
+        Mockito.verify(repository).save(Mockito.any(VisitEntity.class));
     }
 
     @Test
@@ -32,7 +39,6 @@ class VisitServiceTest {
         long result = service.visited();
 
         MatcherAssert.assertThat(result, CoreMatchers.is(2L));
-        Mockito.verify(repository, Mockito.atLeastOnce()).save(entity);
-        Mockito.verify(repository, Mockito.atMostOnce()).save(entity);
+        Mockito.verify(repository, Mockito.never()).save(Mockito.any());
     }
 }

@@ -16,9 +16,13 @@ public class VisitService {
 
     @Transactional
     public long visited() {
-        VisitEntity first = repository.findAll().stream().findFirst().orElse(new VisitEntity(1L, 0L));
+        var visits = repository.findAll();
+        boolean isNew = visits.isEmpty();
+        VisitEntity first = isNew ? new VisitEntity() : visits.getFirst();
         long visited = first.visited();
-        repository.save(first);
+        if (isNew) {
+            repository.save(first);
+        }
         return visited;
     }
 }
