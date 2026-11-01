@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>hu.cubix.cloud</groupId>
 	<artifactId>spring-cloud-native-db-demo</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-cloud-native-db-demo</name>
 	<description>Spring Boot demo project for cloud native applications with DB</description>
 	<properties>
